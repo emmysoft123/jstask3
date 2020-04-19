@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>JSTASK3</title>
+</head>
+<body>
+<script>
+let is_it_divisible = (zoo) => {
+    let arrayx = [];
+    for ( let x = 1; x <= zoo; x++ ) {
+        //conditional statement
+        //checks if number is divisible by 2
+        if( x %2 === 0 ) {
+            if ( x % 3 ===  0 && x % 5 === 0 ) {
+
+                arrayx.push('yu-gi-oh');
+
+            } else if( x % 3 === 0 ) {
+
+                arrayx.push('yu-gi');
+
+            } else if ( x % 5 === 0 ) {
+
+                arrayx.push("yu-oh");
+
+            } else {
+
+                arrayx.push('yu');
+
+            }
+        } 
+         //checks if number is divisible by 3
+         if ( x %3 === 0 ) {
+            if ( x % 2 ===  0 && x % 5 === 0 ) {
+
+                arrayx.push('yu-gi-oh');
+
+            } else if( x % 2 === 0 ) {
+
+                arrayx.push('gi-yu');
+
+            } else if ( x % 5 === 0 ) {
+
+                arrayx.push("gi-oh");
+
+            } else {
+
+                arrayx.push('gi');
+
+            }
+        }
+         //checks if number is divisible by 5
+        else if ( x %5 === 0 ) {
+            if ( x % 2 ===  0 && x % 3 === 0 ) {
+
+                arrayx.push('yu-gi-oh');
+
+            } else if( x % 2 === 0 ) {
+
+                arrayx.push('oh-yu');
+
+            } else if ( x % 3 === 0 ) {
+
+                arrayx.push("oh-gi");
+
+            } else {
+
+                arrayx.push('oh');
+
+            }
+        } else {
+
+            arrayx.push(x);
+        }
+    }
+    return arrayx;
+}
+
+console.log( is_it_divisible(100) );
+</script>
+</body>
+</html>
